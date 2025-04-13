@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Document Metadata -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pomodoro Timer First Brainstorm">
+    <meta name="author" content="Chuheng Xi">
+    <meta name="keywords" content="Pomodoro, Timer, Productivity, Focus">
+    <title>Pomodoro Timer First Brainstorm</title>
+    <link rel="icon" href="favicon.png" type="image/x-icon">
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header>
+      <h1>Pomodoro Timer First Brainstorm</h1>
+    </header>
+
+    <!-- Navigation Section -->
+    <nav>
+      <ul>
+        <li><a href="#main">Main</a></li>
+        <li><a href="#attendance">Attendance</a></li>
+        <li><a href="#agenda">Agenda</a></li>
+        <li><a href="#unfinished-business">Unfinished Business</a></li>
+        <li><a href="#new-business">New Business</a></li>
+        <li><a href="#misc-comments">Miscellaneous Comments</a></li>
+        <li><a href="#meeting-summary">Meeting Summary</a></li>
+        <li><a href="#extra">Extra</a></li>
+        <li><a href="#feedback">Feedback</a></li>
+      </ul>
+    </nav>
+
+    <hr>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Main Section -->
+      <section id="main">
+        <h2>April 9, 2025</h2>
+        <p>
+          Visit the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">MDN Web Docs</a>
+          for more HTML resources.
+        </p>
+      </section>
+
+      <!-- Attendance Section -->
+      <section id="attendance">
+        <h3>Attendance</h3>
+        <ul>
+          <li>Roger</li>
+          <li>James</li>
+          <li>Ethan</li>
+          <li>John</li>
+          <li>Cindy</li>
+        </ul>
+      </section>
+
+      <!-- Agenda and Unfinished Business Section -->
+      <section id="agenda">
+        <h3>Agenda</h3>
+        <ol>
+          <li>Discuss the <em>Pomodoro</em> technique</li>
+          <li>Brainstorm features for the <em>Pomodoro</em> timer</li>
+          <li>Assign tasks for the next meeting</li>
+          <li>Set a date for the next meeting</li>
+        </ol>
+        <h3>Unfinished Business From Last Meeting</h3>
+        <ul>
+          <li>Review the feedback from the last meeting</li>
+          <li>Discuss any unresolved issues</li>
+          <li>Follow up on action items from the last meeting</li>
+        </ul>
+      </section>
+
+      <!-- New Business Section -->
+      <section id="new-business">
+        <h3>New Business</h3>
+        <ul>
+          <li>Learn more about <em>Pomodoro</em> and what it is</li>
+          <li>Brainstorm features for the <em>Pomodoro</em> timer</li>
+          <li>Assign tasks for the next meeting</li>
+          <li>Set a date for the next meeting</li>
+        </ul>
+      </section>
+
+      <!-- Miscellaneous Comments Section -->
+      <section id="misc-comments">
+        <h2>Miscellaneous Comments and Questions</h2>
+        <div>
+          <p>
+            <strong>Roger:</strong> I think we should include a feature to track the number of <i>pomodoros</i> completed.<br>
+            <strong>James:</strong> How will we keep track of that? Maybe a simple counter?<br>
+            <strong>Ethan:</strong> We should also consider adding a feature to customize the length of the <i>pomodoros</i> sessions.<br>
+            <strong>Cindy:</strong> What about adding a feature to set goals for the number of <i>pomodoros</i> completed in a day?<br>
+            <strong>John:</strong> We should also think about how to make the timer visually appealing and user-friendly.<br>
+            <strong>Everyone:</strong> How can we work together to make this happen as a team and keep up with each other?<br>
+          </p>
+        </div>
+        <hr>
+      </section>
+
+      <!-- Meeting Summary Section -->
+      <section id="meeting-summary">
+        <h2>Meeting Summary</h2>
+        <h3>Brainstorm Ideas/Notes</h3>
+        <figure>
+          <img src="meeting-diagrams.png" alt="Brainstorm Diagrams" width="300">
+          <figcaption>Figure 1: Whiteboard Session Diagram</figcaption>
+        </figure>
+
+        <h3>Meeting Audio Recording</h3>
+        <audio controls>
+          <source src="meeting-audio.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+
+        <h3>Meeting Video Recording</h3>
+        <video controls width="600">
+          <source src="meeting-video.mp4" type="video/mp4">
+          Your browser does not support the video element.
+        </video>
+      </section>
+
+      <!-- Feedback Form Section -->
+      <section id="feedback">
+        <h2>Meeting Feedback Form</h2>
+        <form>
+          <fieldset>
+            <legend>Meeting Feedback</legend>
+            <!-- Text Input -->
+            <label for="userName">Name:</label>
+            <input type="text" id="userName" name="userName" required>
+            <br>
+            <!-- Email Input -->
+            <label for="userEmail">Email:</label>
+            <input type="email" id="userEmail" name="userEmail" required>
+            <br>
+            <!-- Date Input -->
+            <label for="meetingDate">Meeting Date:</label>
+            <input type="date" id="meetingDate" name="meetingDate" required>
+            <br>
+            <!-- Radio Buttons -->
+            <p>Did you find the discussion useful?</p>
+            <input type="radio" id="usefulYes" name="useful" value="Yes" required>
+            <label for="usefulYes">Yes</label>
+            <input type="radio" id="usefulNo" name="useful" value="No" required>
+            <label for="usefulNo">No</label>
+            <br>
+            <!-- Checkbox -->
+            <label for="subscribe">Subscribe for updates:</label>
+            <input type="checkbox" id="subscribe" name="subscribe" value="yes">
+            <br>
+            <!-- Textarea -->
+            <label for="comments">Additional Comments:</label><br>
+            <textarea id="comments" name="comments" rows="4" cols="50" placeholder="Please provide any additional comments or feedback you have about the meeting."></textarea>
+            <br>
+            <!-- Datalist with Input -->
+            <label for="topic">Select a topic:</label>
+            <input list="topics" id="topic" name="topic">
+            <datalist id="topics">
+              <option value="Pomodoro Technique">
+              <option value="Timer Features">
+              <option value="Feedback">
+            </datalist>
+            <br>
+            <!-- Select with Options -->
+            <label for="priority">Priority:</label>
+            <select id="priority" name="priority">
+              <option value="high">High</option>
+              <option value="medium">Medium</option>
+              <option value="low">Low</option>
+            </select>
+            <br>
+            <!-- Submit Button -->
+            <button type="submit">Submit Feedback</button>
+          </fieldset>
+        </form>
+      </section>
+
+      <!-- Extra Information Section -->
+      <section id="extra">
+        <h2>Additional Information</h2>
+        <details>
+          <summary>Click here for more information</summary>
+          <p>
+            For more information about the Pomodoro technique, visit the
+            <a href="https://www.pomodorotechnique.com/">Pomodoro Technique website</a>.
+          </p>
+          <p>
+            For more information about the Pomodoro timer, visit the
+            <a href="https://www.tomato-timer.com/">Tomato Timer website</a>.
+          </p>
+          <p>
+            For more information about productivity techniques, visit the
+            <a href="https://www.productivity501.com/">Productivity 501 website</a>.
+          </p>
+        </details>
+      </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+      <p>&copy; 2025 Pomodoro Timer Brainstorm. <b>All rights reserved.</b></p>
+    </footer>
+  </body>
+</html>
