@@ -1,0 +1,48 @@
+/* Colors used in this project:
+--primary-color: Soft Morandi Cream, for text and key accent elements;
+--secondary-color: Morandi Rose, for headers and highlights;
+--tertiary-color: Morandi Teal, for buttons and interactive elements;
+--background-color: Semi-transparent Morandi Sage, for backgrounds;
+*/
+:root {
+    --primary-color: #DAD7CD;
+    --secondary-color: rgb(205, 181, 199);
+    --tertiary-color: #9BA7A6;
+    --background-color: rgba(165, 165, 141, 0.6);
+}
+
+body {
+    background-color: var(--background-color, rgba(165, 165, 141, 0.6));
+}
+
+header {
+    background-color: var(--secondary-color, rgb(205, 181, 199));
+}
+
+main {
+    background-color: rgba(165, 165, 141, 0.6); 
+}
+  
+section {
+    border: 2px solid hsl(60, 12%, 60%); 
+}
+  
+section p {
+    background-color: hsla(14, 16%, 68%, 0.5); 
+}
+  
+a {
+    color: sienna;
+}
+
+aside {
+    color: color(display-p3 0.85 0.84 0.80); 
+  }
+
+
+button {
+    background:color-mix(in srgb, var(--secondary-color, rgb(205, 181, 199)) 50%, var(--tertiary-color, #9BA7A6) 50%);
+    color: var(--primary-color, #DAD7CD);
+}
+
+
