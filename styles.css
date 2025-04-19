@@ -45,4 +45,26 @@ button {
     color: var(--primary-color, #DAD7CD);
 }
 
-
+.flex-nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: auto;       
+    gap: 1.5rem;
+}
+.banner {
+    display: block;                 
+    width: 100%;                     
+    max-width: 1200px;               
+    min-width: 320px;                
+    height: 150px;                   
+    margin: 0 auto;                  
+    position: relative;       
+  }
