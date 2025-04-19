@@ -1,2 +1,2 @@
-# Lab 2 - Starter
-Link to [Website](https://xchuheng613.github.io/Lab2_Starter/)
+# Lab 3
+Link to [Website](https://xchuheng613.github.io/sp25-cse110-lab3/)
