@@ -57,14 +57,24 @@ button {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-auto-rows: auto;       
-    gap: 1.5rem;
+    gap: 1.5em;
 }
 .banner {
     display: block;                 
     width: 100%;                     
     max-width: 1200px;               
-    min-width: 320px;                
-    height: 150px;                   
+    min-width: 200cm;                
+    height: 0.5in;                   
     margin: 0 auto;                  
     position: relative;       
-  }
+}
+.welcome-message {
+    display: inline;
+}
+.footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 10vh;
+    left: 0;
+}
