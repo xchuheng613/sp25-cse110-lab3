@@ -1,7 +1,7 @@
 # 🏃‍♂️ Daily Standup – MM-DD-YYYY
 
-**Time:** [Time of Meeting]  
-**Location:** [Meeting location]  
+**Time:** [Time of eeting]  
+**Location:** [Location of meeting]  
 **Duration:** [Duration of meeting]
 
 ## 👥 Attendees
