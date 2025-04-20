@@ -120,7 +120,6 @@ button {
 .flex-nav li a:active {
     opacity: 0.1;                     
 }
-  
 
 @media (max-width: 600px) {
     .flex-nav {
@@ -130,10 +129,65 @@ button {
       grid-template-columns: 1fr;     
     }
 }
-  
 
 body {
     font-family: 'Roboto', sans-serif; 
 }
+  
+* {
+    box-sizing: border-box;
+  }
+  
+  h2 {
+    font-weight: bold;
+  }
+  
+  .welcome-message {
+    font-style: italic;
+  }
+  
+  #attendance {
+    background-color: var(--secondary-color);
+  }
+
+  a[href^="#"] {
+    border-bottom: 1px dashed var(--primary-color);
+  }
+  
+  button:hover {
+    transform: scale(1.05);
+  }
+
+  h2, h3 {
+    margin-bottom: 1rem;
+  }
+  
+  nav ul li a {
+    color: var(--tertiary-color);
+  }
+
+  nav > ul {
+    list-style-type: none;
+  }
+  
+  h2 ~ p {
+    opacity: 0.8;
+  }
+  
+  h3 + ul {
+    padding-left: 1rem;
+  }
+  
+  section.margin-long {
+    border: 1px solid var(--primary-color);
+  }
+  
+  section:has(figure) {
+    padding: 1rem;
+  }
+
+  .flex-nav > ul li a {
+    transition: color 0.3s;
+  }
   
 
