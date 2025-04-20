@@ -29,6 +29,9 @@ section {
   
 section p {
     background-color: hsla(14, 16%, 68%, 0.5); 
+    text-decoration: underline;
+    text-align: justify;
+    color: grey;
 }
   
 a {
@@ -109,5 +112,28 @@ button {
     border: 10px solid var(--secondary-color, rgb(205, 181, 199));
     border-radius: 10px;
 }
+  
+.flex-nav li a:hover {
+    color: red;     
+}
+  
+.flex-nav li a:active {
+    opacity: 0.1;                     
+}
+  
 
+@media (max-width: 600px) {
+    .flex-nav {
+      flex-direction: column;        
+    }
+    .summary-grid {
+      grid-template-columns: 1fr;     
+    }
+}
+  
+
+body {
+    font-family: 'Roboto', sans-serif; 
+}
+  
 
