@@ -1,7 +1,9 @@
 # Daily Standup – 04-16-2025
 
 **Time:** April 16th, 2025
+
 **Location:** UCSD Geisel Library
+
 **Duration:** 2 hours
 
 ## 👥 Attendees
