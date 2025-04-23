@@ -229,11 +229,11 @@ h3.summary-item-heading {
   color: var(--tertiary-color);
 }
 
-.nested-demo{
-  color:var(--primary-color);
+.nested-demo {
+  color: var(--primary-color);
+}
 
-  @nest .nested-demo span{
-    color:var(--secondary-color);
-    font-weight:700;
-  }
+.nested-demo span {
+  color: var(--secondary-color);
+  font-weight: 700;
 }
