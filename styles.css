@@ -202,7 +202,7 @@ button:hover {
 }
 
 a[href^="#"]{
-  border-bottom:0.5cm dotted var(--tertiary-color)
+  border-bottom:0.02cm dotted var(--tertiary-color)
 }
 
 h2,h3{
