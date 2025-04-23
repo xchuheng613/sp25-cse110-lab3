@@ -1,193 +1,214 @@
-/* Colors used in this project:
---primary-color: Soft Morandi Cream, for text and key accent elements;
---secondary-color: Morandi Rose, for headers and highlights;
---tertiary-color: Morandi Teal, for buttons and interactive elements;
---background-color: Semi-transparent Morandi Sage, for backgrounds;
+/* Colors used in this project (updated Morandi‑inspired palette but still soft and muted)
+   — primary‑color   : text + accents
+   — secondary‑color : headers / highlights
+   — tertiary‑color  : buttons / interactive elts
+   — background‑color: page background
 */
 :root {
-    --primary-color: #DAD7CD;
-    --secondary-color: rgb(205, 181, 199);
-    --tertiary-color: #9BA7A6;
-    --background-color: rgba(165, 165, 141, 0.6);
+  --primary-color: #3A3A39;                    
+  --secondary-color: #8C7F8A;                    
+  --tertiary-color: #4F6D7A;                     
+  --background-color: #F6F5F3;                
 }
 
 body {
-    background-color: var(--background-color, rgba(165, 165, 141, 0.6));
+  background-color: var(--background-color, #F6F5F3);
+  color: var(--primary-color, #3A3A39);
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  margin: 0;
 }
 
 header {
-    background-color: var(--secondary-color, rgb(205, 181, 199));
+  background-image: linear-gradient(to bottom, color-mix(in srgb, var(--secondary-color) 80%, transparent 20%), var(--secondary-color));
+  color: var(--background-color);
+  text-align: center;
+  padding-block: 1.5rem;           
 }
 
-main {
-    background-color: rgba(165, 165, 141, 0.6); 
-}
-  
-section {
-    border: 2px solid hsl(60, 12%, 60%); 
-}
-  
-section p {
-    background-color: hsla(14, 16%, 68%, 0.5); 
-    text-decoration: underline;
-    text-align: justify;
-    color: grey;
-}
-  
-a {
-    color: sienna;
+.banner {
+  display: block;
+  width: 100%;
+  max-width: 1200px;               
+  min-width: 200cm;                
+  height: 0.5in;                   
+  margin: 0 auto;
+  position: relative;
 }
 
-aside {
-    color: color(display-p3 0.85 0.84 0.80); 
-  }
-
-
-button {
-    background:color-mix(in srgb, var(--secondary-color, rgb(205, 181, 199)) 50%, var(--tertiary-color, #9BA7A6) 50%);
-    color: var(--primary-color, #DAD7CD);
+@media (max-width: 2500px) {
+  .banner { min-width: auto; height: auto; }
 }
 
 .flex-nav {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin-block: 1rem;
 }
-.summary-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: auto;       
-    gap: 1.5em;
+
+.flex-nav li a {
+  color: var(--tertiary-color);
+  text-decoration: none;
+  font-weight: 700;
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.5rem;
+  transition: background-color .3s, color .3s, transform .2s;
 }
-.banner {
-    display: block;                 
-    width: 100%;                     
-    max-width: 1200px;               
-    min-width: 200cm;                
-    height: 0.5in;                   
-    margin: 0 auto;                  
-    position: relative;       
-}
-.welcome-message {
-    display: inline;
-}
-.footer{
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    height: 4vh;
-    left: 73%;
-}
-.margin-long{
-    margin-left: 100px;
-    margin-right: 100px;    
-    margin-top: 100px;
-    margin-bottom: 100px;
-}
-.margin-shorthand{
-    margin: 100px 200px 300px 400px;
-}
-.margin-auto{
-    margin: 0 auto;
-}
-.padding-longhand{
-    padding-top: 100px;
-    padding-right: 200px;
-    padding-bottom: 300px;
-    padding-left: 400px;
-}
-.padding-shor{
-    padding: 100px 200px 300px 400px;
-}
-.border-longhand{
-    border-width: 10px;
-    border-style: solid;
-    border-color: var(--secondary-color, rgb(205, 181, 199));
-    border-radius: 10px;
-}
-.border-shorthand{
-    border: 10px solid var(--secondary-color, rgb(205, 181, 199));
-    border-radius: 10px;
-}
-  
+
 .flex-nav li a:hover {
-    color: red;     
+  background-color: color-mix(in srgb, var(--tertiary-color) 20%, transparent);
+  color: var(--secondary-color);
 }
-  
+
 .flex-nav li a:active {
-    opacity: 0.1;                     
+  transform: scale(0.95);
+  opacity: 0.85;
+}
+
+main {
+  background-color: rgba(255,255,255,0.65);       
+  padding: 1.5rem 5vw;                            
+}
+
+section {
+  border: 2px solid color-mix(in srgb, var(--secondary-color) 35%, transparent);
+  border-radius: 0.75rem;                         
+  background-color: var(--background-color);
+  box-shadow: 0 2px 4px rgba(0,0,0,.05);
+  margin-block: 2rem;
+  padding: 1rem clamp(1rem, 3vw, 2rem);
+}
+
+
+section p {
+  background-color: hsla(0,0%,100%,0.5);          
+  text-decoration: underline;
+  text-align: justify;
+  color: var(--primary-color);
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+}
+
+a {
+  color: var(--tertiary-color);
+  text-decoration-color: color-mix(in srgb, var(--tertiary-color) 30%, transparent);
+}
+
+a:hover { text-decoration-thickness: 2px; }
+
+button {
+  background: color-mix(in srgb, var(--secondary-color) 50%, var(--tertiary-color) 50%);
+  color: var(--background-color);
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform .2s, box-shadow .2s;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 2px 8px rgba(0,0,0,.15);
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--secondary-color);
+  color: var(--background-color);
+  text-align: center;
+  padding-block: 0.5rem;
+  font-size: 0.85rem;
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* responsive grid */
+  gap: 2rem;
+}
+
+.summary-grid video,
+.summary-grid img,
+.summary-grid audio {
+    width: 100%;         
+    max-width: 100%;
+    height: auto;
+}
+
+.summary-grid audio {
+  min-height: 3.5rem;                  
+  outline: 1px solid color-mix(in srgb, var(--tertiary-color) 40%, transparent);
+  border-radius: 0.25rem;
+  background-color: #fff;             
+}
+
+@media (max-width: 768px) {
+  /* tighten horizontal padding */
+  main { padding: 1rem 4vw; }
+
+  /* reduce heading sizes slightly for tablets */
+  h1 { font-size: 1.75rem; }
+  h2 { font-size: 1.4rem; }
+
+  /* avoid oversized absolute-unit demo classes obstructing layout */
+  .banner { min-width: auto; height: auto; }
 }
 
 @media (max-width: 600px) {
-    .flex-nav {
-      flex-direction: column;        
-    }
-    .summary-grid {
-      grid-template-columns: 1fr;     
-    }
+  /* stack nav vertically & enlarge tap targets */
+  .flex-nav { flex-direction: column; gap: 0.5rem; align-items: center; }
+  .flex-nav li { width: 100%; }
+  .flex-nav li a { display: block; padding: 0.5rem 0.75rem; }
+
+  /* single-column grid */
+  #meeting-summary { grid-template-columns: 1fr; }
+
+  /* tame demo margin/padding classes */
+  .margin-long,
+  .margin-shorthand,
+  .margin-auto { margin: 0.75rem 0.5rem; }
+
+  .padding-longhand,
+  .padding-shor { padding: 0.75rem 1rem; }
+
+  section { padding: 0.75rem 1rem; }
+
+  /* ensure media is never wider than viewport */
+  img, video { max-width: 100%; height: auto; }
 }
 
-body {
-    font-family: 'Roboto', sans-serif; 
+@media (max-width: 400px) {
+  h1 { font-size: 1.4rem; }
+  h2 { font-size: 1.2rem; }
+  h3 { font-size: 1rem; }
+  button { padding: 0.5rem 1rem; }
 }
-  
-* {
-    box-sizing: border-box;
-  }
-  
-  h2 {
-    font-weight: bold;
-  }
-  
-  .welcome-message {
-    font-style: italic;
-  }
-  
-  #attendance {
-    background-color: var(--secondary-color);
-  }
+  /* stack nav vertically */
+  .flex-nav { flex-direction: column; gap: 0.5rem; align-items: center; }
 
-  a[href^="#"] {
-    border-bottom: 1px dashed var(--primary-color);
-  }
-  
-  button:hover {
-    transform: scale(1.05);
-  }
+  /* single‑column grid */
+  #meeting-summary { grid-template-columns: 1fr; }
 
-  h2, h3 {
-    margin-bottom: 1rem;
-  }
-  
-  nav ul li a {
-    color: var(--tertiary-color);
-  }
+  /* tame demo margin/padding classes */
+  .margin-long,
+  .margin-shorthand,
+  .margin-auto { margin: 1rem 0.5rem; }
 
-  nav > ul {
-    list-style-type: none;
-  }
-  
-  h2 ~ p {
-    opacity: 0.8;
-  }
-  
-  h3 + ul {
-    padding-left: 1rem;
-  }
-  
-  section.margin-long {
-    border: 1px solid var(--primary-color);
-  }
-  
-  section:has(figure) {
-    padding: 1rem;
-  }
+  .padding-longhand,
+  .padding-shor { padding: 1rem; }
 
-  .flex-nav > ul li a {
-    transition: color 0.3s;
-  }
-  
+  section { padding: 0.75rem 1rem; }
 
+@media (max-width: 400px) {
+  h1 { font-size: 1.4rem; }
+  h2 { font-size: 1.2rem; }
+  h3 { font-size: 1rem; }
+  button { padding: 0.5rem 1rem; }
+}
