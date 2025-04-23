@@ -37,8 +37,10 @@ header {
 .banner {
   display: block;
   width: 100%;
-  max-width: 1200px;                              
-  height: 0.5in;                   
+  max-width: 1200px;
+  min-width: auto;
+  min-height: auto;                              
+  height: 1in;                   
   margin: 0 auto;
   position: relative;
 }
