@@ -11,6 +11,18 @@
     <link rel="icon" href="favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+      header{background-image:linear-gradient(var(--secondary-color),var(--secondary-color))} 
+      .flex-nav li a:hover{background-color:var(--tertiary-color)}                              
+      section{border:2px solid var(--secondary-color)}                                        
+      a{ text-decoration-color:var(--tertiary-color)}                                          
+
+      .hide      {display:none}
+      .inline    {display:inline}
+      .inline-b  {display:inline-block}
+      .blocked   {display:block}
+    </style>
   </head>
   <body>
     <!-- Header -->
@@ -110,14 +122,14 @@
       <section id="meeting-summary" class="summary-grid">
         <h2>Meeting Summary</h2>
         <div class="summary-item">
-          <h3>Brainstorm Ideas/Notes</h3>
+          <h3 class="summary-item-heading">Brainstorm Ideas/Notes</h3>
           <figure>
             <img src="meeting-diagrams.png" alt="Brainstorm Diagrams" width="300">
             <figcaption>Figure 1: Whiteboard Session Diagram</figcaption>
           </figure>
         </div>  
         <div class = "summary-item">
-          <h3>Meeting Audio Recording</h3>
+          <h3 class="summary-item-heading">Meeting Audio Recording</h3>
         <audio controls>
           <source src="meeting-audio.mp3" type="audio/mpeg">
           Your browser does not support the audio element.
@@ -125,7 +137,7 @@
         </div>
 
         <div class="summary-item">
-          <h3>Meeting Video Recording</h3>
+          <h3 class = "summary-item-heading">Meeting Video Recording</h3>
           <video controls width="600">
             <source src="meeting-video.mp4" type="video/mp4">
             Your browser does not support the video element.
@@ -211,9 +223,14 @@
       </section>
     </main>
 
+    <p class="inline">inline demo</p><span class="inline-b">inline-block demo</span>
+    
     <!-- Footer Section -->
-    <footer class="footer">
-      <p>&copy; 2025 Pomodoro Timer Brainstorm. <b>All rights reserved.</b></p>
+    <footer class="footer blocked" style="letter-spacing:0.02em">
+      <p>
+        &copy; 2025 Pomodoro Timer Brainstorm.
+        <span class="color-demo"><b>All rights reserved.</b></span>
+      </p>
     </footer>
   </body>
 </html>

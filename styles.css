@@ -11,6 +11,8 @@
   --background-color: #F6F5F3;                
 }
 
+*{box-sizing:border-box}
+
 body {
   background-color: var(--background-color, #F6F5F3);
   color: var(--primary-color, #3A3A39);
@@ -20,7 +22,13 @@ body {
 }
 
 header {
-  background-image: linear-gradient(to bottom, color-mix(in srgb, var(--secondary-color) 80%, transparent 20%), var(--secondary-color));
+  background-image:
+  linear-gradient(
+    to bottom,
+    color-mix(in srgb, var(--secondary-color) 80%, transparent 20%),
+    var(--secondary-color)
+  );
+
   color: var(--background-color);
   text-align: center;
   padding-block: 1.5rem;           
@@ -128,7 +136,7 @@ button:hover {
   font-size: 0.85rem;
 }
 
-.summary-grid {
+#meeting-summary {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* responsive grid */
   gap: 2rem;
@@ -149,66 +157,82 @@ button:hover {
   background-color: #fff;             
 }
 
-@media (max-width: 768px) {
-  /* tighten horizontal padding */
-  main { padding: 1rem 4vw; }
-
-  /* reduce heading sizes slightly for tablets */
-  h1 { font-size: 1.75rem; }
-  h2 { font-size: 1.4rem; }
-
-  /* avoid oversized absolute-unit demo classes obstructing layout */
-  .banner { min-width: auto; height: auto; }
+.margin-long {               /* longhand */
+  margin-top: 1rem;
+  margin-right: 2rem;
+  margin-bottom: 3rem;
+  margin-left: 4rem;
 }
 
-@media (max-width: 600px) {
-  /* stack nav vertically & enlarge tap targets */
-  .flex-nav { flex-direction: column; gap: 0.5rem; align-items: center; }
-  .flex-nav li { width: 100%; }
-  .flex-nav li a { display: block; padding: 0.5rem 0.75rem; }
-
-  /* single-column grid */
-  #meeting-summary { grid-template-columns: 1fr; }
-
-  /* tame demo margin/padding classes */
-  .margin-long,
-  .margin-shorthand,
-  .margin-auto { margin: 0.75rem 0.5rem; }
-
-  .padding-longhand,
-  .padding-shor { padding: 0.75rem 1rem; }
-
-  section { padding: 0.75rem 1rem; }
-
-  /* ensure media is never wider than viewport */
-  img, video { max-width: 100%; height: auto; }
+.margin-shorthand {          /* shorthand */
+  margin: 1rem 2rem 3rem 4rem;
 }
 
-@media (max-width: 400px) {
-  h1 { font-size: 1.4rem; }
-  h2 { font-size: 1.2rem; }
-  h3 { font-size: 1rem; }
-  button { padding: 0.5rem 1rem; }
+.margin-auto {               /* auto-margin example */
+  margin: 0 auto;
 }
-  /* stack nav vertically */
-  .flex-nav { flex-direction: column; gap: 0.5rem; align-items: center; }
 
-  /* single‑column grid */
-  #meeting-summary { grid-template-columns: 1fr; }
+.padding-longhand {          /* longhand */
+  padding-top: 1rem;
+  padding-right: 2rem;
+  padding-bottom: 1.5rem;
+  padding-left: 2.5rem;
+}
 
-  /* tame demo margin/padding classes */
-  .margin-long,
-  .margin-shorthand,
-  .margin-auto { margin: 1rem 0.5rem; }
+.padding-shorthand {              /* shorthand */
+  padding: 1rem 2rem 1.5rem 2.5rem;
+}
 
-  .padding-longhand,
-  .padding-shor { padding: 1rem; }
 
-  section { padding: 0.75rem 1rem; }
+.border-longhand {           /* border-width / style / color – longhand */
+  border-width: 4px;
+  border-style: solid;
+  border-color: var(--tertiary-color);
+  border-radius: 0.5rem;
+}
 
-@media (max-width: 400px) {
-  h1 { font-size: 1.4rem; }
-  h2 { font-size: 1.2rem; }
-  h3 { font-size: 1rem; }
-  button { padding: 0.5rem 1rem; }
+.border-shorthand {          /* shorthand with a different style */
+  border: 4px dashed crimson;
+  border-radius: 0.5rem;
+}
+
+.color-demo {
+  color: color(display-p3 0.85 0.84 0.80);
+}
+
+a[href^="#"]{
+  border-bottom:1px dotted var(--tertiary-color)
+}
+
+h2,h3{
+  margin-bottom:.75rem
+}
+
+nav>ul{
+  padding-left:0
+}
+
+h3+ul{
+  padding-left:1rem
+}
+
+h2~p{
+  opacity:.9
+}
+
+section:has(figure){
+  outline:2px dashed var(--secondary-color);outline-offset:4px
+}
+
+h3.summary-item-heading {
+  color: var(--tertiary-color);
+}
+
+.nested-demo{
+  color:var(--primary-color);
+
+  @nest .nested-demo span{
+    color:var(--secondary-color);
+    font-weight:700;
+  }
 }
